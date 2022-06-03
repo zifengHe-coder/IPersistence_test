@@ -25,6 +25,7 @@ public class IPersistenceTest {
         SqlSession sqlSession = sqlSessionFactory.openSession();
         User user = new User();
         user.setId(1);
+        user.setUsername("tom2");
         IUserDao userDao = sqlSession.getMapper(IUserDao.class);
         User result = userDao.findByCondition(user);
         System.out.println(result);
